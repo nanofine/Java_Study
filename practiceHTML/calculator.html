@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = 0;
+	var b = 0;
+	var act = "";
+	var flag = 0;
+	var flag2 = 0;
+	var flag3 = 0;
+	function num(j) {
+		var t = document.getElementById("text");
+		if (t.value == "0")
+			t.value = "";
+		if (flag == 0) {
+			t.value += j.value;
+			a = parseFloat(t.value);
+		}
+		if (flag == 1) {
+			if (flag3 == 1)
+				t.value = "";
+			t.value += j.value;
+			b = parseFloat(t.value);
+			flag2 = 1;
+		}
+	}
+	function ac(i) {
+
+		var t = document.getElementById("text");
+		act = i.value;
+		flag = 1;
+		t.value = "";
+		if (flag2 == 1) {
+			flag3 = 1;
+			if (act == "+") {
+				a += b;
+				t.value = a;
+			}
+			if (act == "-") {
+				a -= b;
+				t.value = a;
+			}
+			if (act == "*") {
+				a *= b;
+				t.value = a;
+			}
+			if (act == "/") {
+				a /= b;
+				t.value = a;
+			}
+		}
+		flag2 = 1;
+	}
+
+	function reset(i) {
+		var t = document.getElementById("text");
+		t.value = 0;
+		flag = 0;
+		act = "";
+		a.value = 0;
+		b.value = 0;
+		flag2 = 0;
+		flag3 = 0;
+	}
+
+	function equals() {
+		console.log(act);
+		var t = document.getElementById("text");
+		if (flag == 1) {
+			b = parseFloat(t.value);
+			flag = 2;
+		}
+		if (act == "+") {
+			a += b;
+			t.value = a;
+			console.log(a);
+			console.log(b);
+		}
+		if (act == "-") {
+			a -= b;
+			t.value = a;
+		}
+		if (act == "*") {
+			a *= b;
+			t.value = a;
+		}
+		if (act == "/") {
+			a /= b;
+			t.value = a;
+		}
+	}
+
+	//eval => json으로 값을 넘길때 오브젝트화 해주는것, 계산기능도 있음.
+</script>
+</head>
+<body>
+
+	<input type="text" id="text" value="0" />
+	<br />
+	<br />
+	<br />
+	<input type="button" value="7" onclick="num(this);" />
+	<input type="button" value="8" onclick="num(this);" />
+	<input type="button" value="9" onclick="num(this);" />
+	<input type="button" value="+" onclick="ac(this);" />
+	<br />
+	<input type="button" value="4" onclick="num(this);" />
+	<input type="button" value="5" onclick="num(this);" />
+	<input type="button" value="6" onclick="num(this);" />
+	<input type="button" value="-" onclick="ac(this);" />
+	<br />
+	<input type="button" value="1" onclick="num(this);" />
+	<input type="button" value="2" onclick="num(this);" />
+	<input type="button" value="3" onclick="num(this);" />
+	<input type="button" value="*" onclick="ac(this);" />
+	<br />
+	<input type="button" value="0" onclick="num(this);" />
+	<input type="button" value="C" onclick="reset();" />
+	<input type="button" value="=" onclick="equals();" />
+	<input type="button" value="/" onclick="ac(this);" />
+
+
+
+</body>
+</html>

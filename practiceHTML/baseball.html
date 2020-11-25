@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var answer = new Array();
+
+var st = 0;
+var ba= 0;
+var num = 0;
+function restart(){
+	answer = [""];
+	var a = Math.floor(Math.random()*9+1);
+	answer[0] = a;
+	a = Math.floor(Math.random()*9+1);
+	
+	for(var i=1;i<3;i++){
+		for(var j=0;j<3;j++){
+			num++;
+		if(answer[j] == a){
+			a = Math.floor(Math.random()*9+1);
+			j = -1;
+			}
+		}
+		answer[i] = a;
+		a = Math.floor(Math.random()*9+1);
+	}
+	st = 0;
+	ba = 0;
+	console.log(answer);
+}
+
+function start(){
+	var f = document.getElementById("f");
+	var s = document.getElementById("s");
+	var t = document.getElementById("t");
+	
+	var wrap = document.getElementById("wrap");
+
+	
+	var an = new Array();
+	an[0] = f.value*1;
+	an[1] = s.value*1;
+	an[2] = t.value*1;
+	
+	
+	for(var o=0;o<3;o++){
+		for(var k=0;k<3;k++){
+			if(answer[o] == an[k] && o == k){
+				st++;
+			}
+			else if(answer[o] == an[k] && o != k){
+				ba++;
+				/* console.log(ba); */
+				}
+			}
+		}
+	console.log(st+"스트라이크");
+	console.log(ba+"볼");
+	if(st != 0 || ba != 0){
+	var html = "<div id =\"con" + t.value + "\">"+f.value+" "+s.value+" "+t.value + " : " +st+" S "+ba+" B " ;
+	}
+	if(st == 0 && ba == 0){
+		var html = "<div id =\"con" + t.value + "\">"+f.value+" "+s.value+" "+t.value + " : OUT!";
+	}
+	 if(st==3 && ba ==0){	
+		var html = "<div id =\"con" + t.value + "\">"+f.value+" "+s.value+" "+t.value + " : HOME RUN!";
+	}
+	wrap.innerHTML = html + wrap.innerHTML;  
+	st = 0;
+	ba = 0;
+}
+</script>
+<style type="text/css">
+
+ 
+.box1 {
+	width: 200px;
+	height:200px;
+	border: 1px solid #111111;
+}
+.input {
+	width:50px;
+}
+</style>
+</head>
+<body>
+
+<div class="box1" id="wrap">
+<div id ="con1"></div>
+</div>
+<input class="input" type="text" maxlength="1" id="f" >
+<input class="input" type="text" maxlength="1" id="s" >
+<input class="input" type="text" maxlength="1" id="t" >
+<input class="input" type="button" value="시작!" onclick="restart();"/>
+<input class="input" type="button" id="start" value="정답" onclick="start();"/>
+</body>
+</html>

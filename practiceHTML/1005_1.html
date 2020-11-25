@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+var num = 32;
+var num1 = 2;
+var ans = new Array();
+
+/* function a(b){
+var cnt = 0;
+	for(var j=2;j<b;j++){
+		if(b%j == 0){
+			j=1;
+			b++;
+		}
+	} 
+	if(cnt == 0){
+		return b;
+	cnt = 0;
+	}
+}
+ */
+while((num/num1) >= 1){	
+	
+	if(num%num1 == 0 ){
+			num/=num1;
+			ans.push(num1);
+			num1--;
+	}
+/* 	else if(num%num1 != 0){
+		num1=a(num1+1);
+	} */
+	num1++;
+}
+console.log(ans);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

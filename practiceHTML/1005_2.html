@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var cnt = 0;
+var cnt2 = 0;
+var answer1 = new Array();
+var answer2 = new Array();
+for(var i = 25; i<=118;i++){
+	for(var j = 1;j<=i;j++){
+		if(i%j==0){
+			cnt++;
+		}
+		if(i%j==0){
+			cnt2++;
+		}
+	}
+	if(cnt != 2){
+		answer1.push(i);
+	}
+	if(cnt2 == 2){
+		answer2.push(i);
+	}
+	cnt = 0;
+	cnt2 = 0;
+}
+console.log("소수가 아닌것 : "+answer1);
+console.log("소수 : "+answer2);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

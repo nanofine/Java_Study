@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var sum = 0;
+
+function fact(a){
+	  if(a==1) return 1;
+	  else return a*fact(a-1);
+	}
+	
+for(var i=1; i<=10;i++){
+	sum += fact(i);
+	console.log(i+"! = "+fact(i) + " 합:"+sum);
+}
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

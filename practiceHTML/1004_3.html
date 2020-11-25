@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var num = [28,19,87,66,45,6,79,30,96,33];
+var a = 57;
+var temp = 0;
+var temp2 = 0;
+var temp3 = num[0];
+	temp = Math.abs(a - num[0]);
+for(var i=1;i<num.length;i++){
+	temp2 = Math.abs(a - num[i]);
+
+		if(temp>temp2){
+		temp = temp2;
+		temp3 = num[i]; 
+		
+	}
+}
+console.log(num +"중에서  57에 가장 가까운 수는 :"+temp3);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

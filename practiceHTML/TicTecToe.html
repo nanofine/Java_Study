@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"src="../js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+var xflag=1;
+var oflag=0;
+
+var xnum = 0;
+var onum = 0;
+var temp = "";
+var temp2="";
+var array = [[0,0,0],[0,0,0],[0,0,0]];
+
+ $(document).ready(function(){
+	 $(".box").on("click",function(){
+		 if((xflag == 1) &&($(this).children().length== 0)){
+			 var html = "<input class=\"x\" value=\"X\" readonly=\"readonly\"/>";
+		 $(this).append(html);
+		 xflag=0;
+		 oflag=1;
+		 check();
+		 }
+		  else if((oflag == 1) &&($(this).children().length== 0)){
+			 var html = "<input class=\"o\" value=\"O\" readonly=\"readonly\"/>";
+			 $(this).append(html);
+			 xflag=1;
+			 oflag=0;
+		 check();
+		 } 
+	 });
+ });
+ 
+ function check(){
+	 console.log(array);
+/* 	 for(var i=0;i<3;i++)
+		 for(var j=0;j<3;j++){
+			   temp=temp_array[i][j].children(0);
+			 console.log(temp.val());  
+			 if((temp.val()) == "X"){
+				 array[i][j] = 1;
+			 }
+			 else if((temp.val()) == "O"){
+				 array[i][j] = 2;
+			 }
+		 }
+	 for(i=0;i<3;i++){
+		 for(j=0;j<3;j++){
+			 if(array[i][j]==1){
+				 xnum++;
+				 if(xnum==4){
+					 alert("x 승리!");
+				 }
+			}
+			 if(array[i][j]==2){
+				 onum++;
+				 if(onum==3){
+					 alert("o 승리!");
+				 }
+			}
+		 }
+		 xnum=0;
+		 onum=0;
+	 } */
+ }
+</script>
+<style type="text/css">
+body{
+	font-size: 0px;
+	outline:0;
+}
+input{
+border:0px;
+}
+.center_box{
+position:absolute;
+	display:inline-block;
+	width:500px;
+	height:500px;
+	left:calc(50% - 300px);
+	top:calc(50% - 300px);
+}
+.box{
+	display: inline-block;
+	border:1px solid black;
+	width:32%;
+	height:32%;
+	vertical-align: top;
+}
+.o{
+display: inline-block;
+	width:98%;
+	height:98%;
+	font-size:150px;
+	text-align: center;
+}
+.x{
+display: inline-block;
+	width:98%;
+	height:98%;
+	font-size:150px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="center_box">
+<div class="box" id="box1" ></div>
+<div class="box" id="box2" ></div>
+<div class="box" id="box3" ></div>
+<div class="box" id="box4" ></div>
+<div class="box" id="box5" ></div>
+<div class="box" id="box6" ></div>
+<div class="box" id="box7" ></div>
+<div class="box" id="box8" ></div>
+<div class="box" id="box9" ></div>
+
+</div>
+</body>
+</html>
