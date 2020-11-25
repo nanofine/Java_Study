@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ERP 공용 템플릿</title>
+<link rel="stylesheet" type="text/css" href="./css/common/main.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/board.css" />
+<style type="text/css">
+/* 검색영역 가로변경 시 */
+.default_search_area {
+	width: 800px;
+}
+
+/* 목록영역 가로변경 시 */
+.default_board {
+	width: 800px;
+}
+
+.date_center{
+	display: inline-block;
+	height:32px;
+	width:15px;
+	font-size: 15pt;
+	vertical-align: top;
+	margin:0px 15px 0px 30px;
+}
+/* 개별 css는 여기에 */
+
+</style>
+</head>
+<body>
+	<!-- Top Bar -->
+	<div class="top_area">
+		<div class="logo"></div>
+		<div class="top_menu_area">
+			<div class="top_menu">
+				<div class="top_menu_txt">Groupware</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">HR</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">Sales</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">CRM</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">EIS</div>
+			</div>
+		</div>
+		<div class="info_area">
+			<div class="info_wrap">
+				<div class="photo">
+					<img alt="사진" src="./images/sample/photo.jpg">
+				</div>
+				<div class="info_txt">
+					신사동 영업2팀<br />사원 홍길동
+				</div>
+				<div class="top_option_btn"></div>
+				<div class="top_noti_btn">
+					<div class="noti_cnt_on">3</div>
+				</div>
+				<div class="logout_btn">
+					<div class="logout_btn_txt">로그아웃</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Left Menu -->
+	<div class="left_area">
+
+		<div class="menu1_title">
+			<div class="menu1_txt">CRM</div>
+		</div>
+
+		<div class="menu2_wrap_on">
+			<div class="menu2_title">
+				<div class="menu2_txt">캠페인</div>
+			</div>
+			<div class="menu3_wrap">
+				<div class="menu3_title">
+					<div class="menu3_txt">캠페인 관리</div>
+				</div>
+				<div class="menu3_title">
+					<div class="menu3_txt">템플릿 관리</div>
+				</div>
+				<div class="menu3_title_on">
+					<div class="menu3_txt">채널 관리</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu2_wrap">
+			<div class="menu2_title">
+				<div class="menu2_txt">고객</div>
+			</div>
+		</div>
+		<div class="menu2_wrap">
+			<div class="menu2_title">
+				<div class="menu2_txt">콜센터</div>
+			</div>
+			<div class="menu3_wrap">
+				<div class="menu3_title_on">
+					<div class="menu3_txt">콜센터 등록</div>
+				</div>
+				<div class="menu3_title">
+					<div class="menu3_txt">콜센터 관리</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu2_wrap">
+			<div class="menu2_title">
+				<div class="menu2_txt">CRM 관리자 페이지</div>
+			</div>
+			<div class="menu3_wrap">
+				<div class="menu3_title_on">
+					<div class="menu3_txt">결재</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contents -->
+	<div class="contents_area">
+		<div class="gnb">
+			<div class="gnb_txt">Home > CRM > 캠페인 > 채널 관리</div>
+		</div>
+		<div class="contents_header">
+			<div class="contents_header_txt">채널 관리</div>
+		</div>
+		<div class="contents">
+			<!-- 여기에 내용을 작성하시오. -->
+			<div class="default_search_area">
+				<select style="margin-left:10px">
+					<option>채널유형(전체)</option>
+					<option>SMS</option>
+					<option>SNS</option>
+					<option>MMS</option>
+					<option>E-MAIL</option>
+				</select> 
+				
+				<select style="margin:0px 20px 0px 90px">
+					<option>공급업체(전체)</option>
+					<option>KT</option>
+					<option>LG</option>
+					<option>SKT</option>
+					<option>네이버</option>
+					<option>구글</option>
+				</select>
+				<select style="margin:0px 0px 0px 145px">
+					<option>공급유형(전체)</option>
+					<option>건당</option>
+					<option>기간</option>
+				</select>
+				<input type="text" placeholder="공급 단가를 입력하세요." style="">
+				<input type="date">
+				<div class="date_center">~</div>
+				<input type="date">
+			
+				<div class="search_btn_area">
+					<input type="button" value="새로고침" />
+				</div>
+			</div>
+			<div class="default_board">
+				<table>
+					<colgroup>
+						<col width="300px">
+						<col width="160px">
+						<col width="160px">
+						<col width="300px">
+					</colgroup>
+					<thead>
+						<tr class="top">
+							<th>채널유형</th>
+							<th>공급업체</th>
+							<th>공급유형(단가)</th>
+							<th>기간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+						<tr>
+							<td>채널유형 입니다.</td>
+							<td>공급업체 입니다.</td>
+							<td>공급유형(단가)</td>
+							<td>2020-09-01 ~ 2020-10-28</td>
+						</tr>
+					
+												
+					</tbody>
+				</table>
+				<div class="page_wrap">
+					<div class="page_nation">
+						<div class="arrow prev"></div>
+						<div class="page_on">1</div>
+						<div class="page">2</div>
+						<div class="page">3</div>
+						<div class="page">4</div>
+						<div class="arrow next"></div>
+					</div>
+					<div class="search_btn_area" >
+					<input type="button" value="채널 등록" style="height:29px" />
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
