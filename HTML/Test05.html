@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		.a {
+			background-color:red;
+		}
+		#b{
+			background-color:green;
+		}
+		[name = "c"]{
+			background-color:blue;
+		}
+		div.a{				/*div 이면서 클래스가 a 인 것*/
+			color: white; /*글자 색깔을 바꿀떄 color만 단독사용*/
+		}
+		.d , .e{
+			color:orange;
+		}
+		
+		#b div{
+			background-color:silver;
+		}
+		#b > div{
+			background-color:red;
+		}
+		span:hover{
+			background-color:yellow;
+		}
+
+		
+		</style>
+	</head>
+	<body>
+		<div class = "a">1</div>
+		<div id = "b">2
+			<div>2-1
+				<div>2-1-1</div>
+			</div>
+			<div>2-2</div>
+		</div>
+		<div name = "c">3</div>
+		<span  class = "a">4</span>
+		<span class ="d">5</span>
+		<span class = "e">6</span>
+		
+	</body>
+</html>

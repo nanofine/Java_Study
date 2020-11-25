@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = 1;
+
+	switch (a) {
+	case 1:
+		console.log("1 이다.");
+		break;
+	case 2:
+		console.log("2 이다.");
+		break;
+	default:
+		console.log("아무것도 아니다.");
+	}
+
+	//Math.floor(숫자) : 숫자를 버림처림한다.
+	console.log(Math.floor(1.2));
+
+	var score = 77;
+	//switch를 이용하여 학점을 구하시오.
+	var grade;
+
+	score /= 10;
+	score = Math.floor(score);
+
+	switch (score) {
+	case 10:
+		grade = "A";
+		break;
+	case 9:
+		grade = "A";
+		break;
+	case 8:
+		grade = "B";
+		break;
+	case 7:
+		grade = "C";
+		break;
+	case 6:
+		grade = "D";
+		break;
+	default:
+		grade = "F";
+	}
+
+	console.log("A~F 성적 :" + grade);
+
+	score = 77;
+
+	score /= 5;
+	score = Math.floor(score);
+	switch (score) {
+	case 20:
+	case 19:
+		grade = "A+";
+		break;
+	case 18:
+		grade = "A";
+		break;
+	case 17:
+		grade = "B+";
+		break;
+	case 16:
+		grade = "B";
+		break;
+	case 15:
+		grade = "C+";
+		break;
+	case 14:
+		grade = "C";
+		break;
+	case 13:
+		grade = "D+";
+		break;
+	case 12:
+		grade = "D";
+		break;
+
+	default:
+		grade = "F";
+	}
+	console.log("A+~F 성적 :" + grade);
+
+	var c = 1;
+	c += 2;
+	console.log(c);
+	c -= 2;
+	console.log(c);
+	c *= 2;
+	console.log(c);
+	c /= 2;
+	console.log(c);
+	c %= 2;
+	console.log(c);
+
+	//
+	console.log(++c);
+	console.log(c++);
+	console.log(--c);
+	console.log(c--);
+
+	score = 77;
+
+	if (score >= 75 && score <= 79) {
+		console.log("c+");
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

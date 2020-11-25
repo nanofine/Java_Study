@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	<!--  여러줄 입력 -->
+		<textarea rows="4" cols="20">가나다
+		라마바
+		사아자</textarea>			<!-- rows, cols 2가지 속성 존재 rows=가로 cols(colurn)=세로 -->
+								<!-- 멀티 라인 입력창 (여러줄을 입력하게 하기 위한 것, entity가 존재) -->
+		<br/>
+		<input type = "button" value = "이거슨 버튼">
+		<button type = "button">이거슨버튼</button> <!--  버튼안에 텍스트가 들어간다(value) -->
+		<br/>
+		<select> <!-- multiple 속성은사용안함 -->
+		<option value = "0" >쌀국수</option>  <!-- 옵션에도 value존재 -->
+		<option value = "1" selected = "selected">메밀국수</option>
+		</select><!-- 단독 사용 불가, 옵션 존재 -->
+		<br/>
+		<input type = "checkbox" id = "a"/><label for="a">a</label> <!-- a라는 id와  a가 관계있다 -->
+		<input type = "checkbox" id = "b"/><label for="b">b</label> <!--checkbox 나 radio에서 많이 사용 -->
+		<br/>
+		<!-- 예전에 아래와 같은 사이트도 있었음 -->
+		탈퇴하시겠습니까?
+		<input type = "radio" name="a" disabled = "disabled"/>Yes
+		<input type = "radio" name="a" checked = "checked"/>No
+		<br/>
+		<img alt = "회색고양이" src="cat.png" usemap = "#test"/>
+		<map name="test">
+			<area alt="구글" href = "http://google.com" shape = "rect" coords = "82,35,451,470"
+			target = "_blank"/>
+		</map>
+		<br/>
+		<a href = "http://google.com" target = "_blank">구글이동</a>
+		<br/>
+		<ul>
+  			<li>Coffee</li>
+ 			<li>Tea</li>
+  			<li>Milk</li>
+		</ul>
+		<br/>
+		<ol>
+ 			<li>Chapter 1. HTML</li>
+ 			<li>Chapter 2. CSS</li>
+  			<li>Chapter 3. JAVASCRIPT</li>
+		</ol>
+		<br/>
+		<dl>
+  			<dt>HTML</dt>
+   				<dd>- Hyper Text Mark-up Language</dd>
+  			<dt>CSS</dt>
+    			<dd>- Cascading Style Sheet</dd>
+		</dl>
+		<br/>
+		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+	</body>
+</html>
+
+
+<!--
+Forms
+	<button> 
+		type - submit은 값의 유효여부 상관없이 전송, 현재 안쓰임
+		<input type button> 과 <button>은 같다. ,개발자가 사용할시 input type을 사용
+    								            디자이너는 button tag 사용 
+    <select>			
+    	<option>
+    	  selected - 옵션이 선택되어져 실행됨
+Images
+    <image>
+    	src - 이미지가 위치하는 곳의 url을 지정 , 많이 사용
+    	alt - 이미지를 위한 대체텍스트,시각장애인을 위한 사이트에서 많이 사용, 마우스를 가져대면 읽어줌, 써주는게 좋다
+		웹개발에서는 PNG 이미지를 많이 사용
+	<area> - 영역을 정의하는 태그
+		shape - rect,circle,poly
+		
+	//경로//
+		A(폴더)ㅡ B(가.png)
+		      |ㅡ C(나.png, a.html)	
+		      
+	절대경로 - 물리적인 전체경로
+	상대경로 - 현재 위치 기준 경로 -> .(현재위치) ,  ..(상위)
+		가.png의 절대경로 => A/ A/B/가.png
+		a.html에서 가.png의 상대경로 => ../B/가.png (..은 A폴더를 표현)
+		a.html에서 나.png의 상대경로 => ./나.png(.은 C폴더를 표현) || 나.png(같은공간에 있는 파일이면 ./ 표현안함)
+		상대경로가 더 사용을 많이 함, 현채위치를 아는것이 중요	
+	폴더 -> / (개발에서 사용)	
+	\(달러 표시-window)
+	\\(달러표시 2개 - 개발)		 
+		 
+	//shape//
+		<map> 안에 존재 가능(image에서 usemap 사용시 usemap"#맵이름" # 필수 )
+		rect - 대각선을 기준으로 왼쪽위(x1,y1),오른쪽 아래(x2,y2) 필요 , 요소4개 필요
+		circle - 점(x,y)를 기준으로 반지름 a를 이용해 원을 생성, 요소 3개 필요
+		poly - 점의 개수 제한이없다, 점(x1,y1),점(x2,y2),점(x3,y3)가 존재할시 점(x1,y1)은 점(x2,y2)로 순서대로 이어진다,
+								단, 마지막점은 점(x1,y1)으로 이어진다.
+		coords - 영역의 좌표 지정
+		href - 참조경로(이미지영역에 링크를 적용시켜 다른 페이지로 이동)
+		target - 링크되는 페이지의 위치를 지정 ex) 링크 클릭시 새로운 창에서 이동(광고에서 대부분 사용) => target="_blank"
+Links
+	//a// - 앵커 태그 || a태그 (링크), 잘안쓰임, script로 대체
+	
+Lists
+	<ul> - 목록형 리스트 표현 	. 으로 리스트표현
+	<ol> - 숫자로 리스트 표현
+	<dl>,<dt>,<dd> - dt - 정의목록, dd - 정의목록 항목들을 설명  , dl-dt,dd를 묶어서 사용 ,사용거의안함
+	
+w3c - 웹표준 안내 사이트 ,w3cschool.com - 웹표준 공부사이트
+-->

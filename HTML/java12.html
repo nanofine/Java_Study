@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 선언
+function test() {
+	console.log("test호출");
+	
+}
+
+function plus(a, b) {
+	console.log(a + b);
+	
+}
+function test2() {
+	return "Hello";
+		
+}
+// 호출
+test();
+plus(1, 3);
+console.log(test2());
+
+function a() {
+	var t = document.getElementById("txt");
+	
+	console.log(t.value);
+}
+
+function b() {
+	var t = document.getElementById("txt");
+	
+	t.value = "";
+}
+</script>
+</head>
+<body>
+<input>
+<input type="text" id="txt"/>
+<input type="button" value="테스트" onclick="a();" />
+<input type="button" value="테스트2" onclick="b();" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

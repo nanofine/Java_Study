@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#runBtn").on("click",function(){
+		for(var i=1;i<=9;i++){
+			$("#res").append($("#dan").val() + " * " + i + " = "+ $("#dan").val()*i + "<br/>");
+		}
+			$("#dan").val(""); 
+	});
+	
+	
+	$("#reset").on("click",function(){
+		$("#res").empty();
+		$("#dan").val(""); 
+	});
+});
+
+</script>
+</head>
+<body>
+<input type="text" id="dan" placeholder="단을입력해주세요."/>
+<input type="button" value="나와라!" id="runBtn"/>
+<input type="button" value="화면 지우기" id="reset"/>
+<div id="res"></div>
+</body>
+</html>

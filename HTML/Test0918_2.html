@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [ 3, 5, 7 ];
+	console.log(arr[2]);
+
+	arr[2] = 11;
+	console.log(arr[2]);
+	console.log(arr.length);
+	for (var i = 0; i < arr.length; i++) {
+		console.log(arr[i]);
+	}
+
+	///////////////////////////////////
+
+	/* if(a[0] > a[1]){
+		
+	}
+	if(a[0] > a[2]){
+		
+	}
+	if(a[1] > a[2]){
+		
+	} */
+	
+	var a = [ 4, 1, 2];
+	 var temp = 0;
+	for (var i = 0; i < a.length-1; i++) {
+		for(var j =i+1; j<a.length; j++){
+		if(a[i] > a[j]){
+			temp = a[j];
+			a[j] = a[i];
+			a[i] = temp;
+			}
+		}
+		console.log(i+"번째 :" + a);
+	} 
+	console.log(a); 
+	
+	a = [ 9,8,7,6,5,4];
+	temp = 0;
+	var temp2 = 0;
+	for(var i = a.length-1; i>=0 ;i--){
+		 if(a[i] < a[i-1]){
+			temp = a[i-1];
+			a[i-1] = a[i];
+			a[i] = temp; 
+		}
+		if(i == 0){
+			i = a.length;
+		temp2++;
+		}0
+		if(temp2 == a.length-1)
+			i = -1;
+	}
+	console.log(a);
+	
+	a = [ 9,8,7,6,5,4];
+	console.log(a);
+	
+	//sort 함수 사용
+	a.sort();
+	console.log(a);
+</script>
+</head>
+<body>
+
+</body>
+</html>

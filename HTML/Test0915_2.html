@@ -1,0 +1,66 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var a = 5;
+var b = 7;
+var c = 3;
+//a,b,c를 오름차순 정렬하시오.
+//작성
+var d; // 임의로  저장 할 변수
+var n; // 변수의 개수 
+
+ if(a > b){
+	d = b;
+	b = a;
+	a = d;
+}
+if(a > c){
+	d = c;
+	c = a;
+	a = d;
+}
+if(b > c){
+	d = c;
+	c = b;
+	b = d;
+}  
+console.log(a); //3
+console.log(b); //5
+console.log(c); //7
+
+//버블정렬 시간복잡도-n^2
+var a = 5;
+var b = 7;
+var c = 3;
+ var number = new Array();
+n = 3;
+number[0] = a;
+number[1] = b;
+number[2] = c;
+var i , j;
+for(var i=n-1;i>0;i--)
+	for(var j=0; j<i ;j++){
+	if(number[j] > number[j+1]){
+		d = number[j];
+		number[j] = number[j+1];
+		number[j+1] = d;
+	}
+}
+//
+//작성끝
+console.log(number[0]); //3
+console.log(number[1]); //5
+console.log(number[2]); //7
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.box {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	border: 1px solid #444444;
+	vertical-align: top;
+}
+</style>
+<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//btn1 start
+	$("#btn1").on("click",function(){
+		$(".box").animate({
+			width : "+=50px",   //띄어쓰기 금지!!!!
+			height:"+=50px"
+		},3000);
+	}); //btn1 end
+	//btn2 start
+	$("#btn2").on("click",function(){
+		$(".box").hide();
+	});//btn2 end
+	//btn3 start
+	$("#btn3").on("click",function(){
+		$(".box").show();
+	});//btn3 end
+	//btn4 start
+	$("#btn4").on("click",function(){
+		$(".box").stop();
+	});//btn4 end
+	
+});
+</script>
+</head>
+<body>
+<input type="button" value="버튼1" id="btn1"/>
+<input type="button" value="버튼2" id="btn2"/>
+<input type="button" value="버튼3" id="btn3"/>
+<input type="button" value="버튼4" id="btn4"/>
+<br/>
+<div class="box"></div>
+</body>
+</html>

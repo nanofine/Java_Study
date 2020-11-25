@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//alert(값) : 값을 경고창에 띄운다.
+	var a = "치킨";
+	console.log(a);
+	var b, c;
+	b = 7;
+	c = 22;
+	var d = "2";
+
+	console.log(a + b);
+	console.log("b + c :" + (b + c));
+	console.log(b - c);
+	console.log(b * c);
+	console.log(b / c);
+	console.log(b % c);
+	console.log(b * d); //문자열(숫자) * 숫자 가능
+
+	var a1 = 10;
+	var a2 = 20;
+	var a3 = "30";
+	console.log(a1 + a2 + a3);
+	console.log(a3 + a2 + a1);
+	console.log(a3 * 2);
+
+	console.log(b > c);
+	console.log(b < c);
+	console.log(b >= c);
+	console.log(b <= c);
+	console.log(b == c);
+	console.log(b != c);
+
+	if (b > c) {
+		console.log("b가 c보다 크다");
+	} else if (b == c) {
+		console.log("b와 c가 같다.")
+	} else {
+		console.log("b가 c보다 작다");
+	}
+
+	// score에 따른 학점을 출력하세요
+	/*
+	 A - 90 ~ 100
+	 B - 80 ~ 89
+	 C - 70 ~ 79
+	 D - 60 ~ 69
+	 */
+	var score = 89;
+	
+	if (score >= 90) {
+		console.log("A");
+	} else if (score >= 80) {
+		console.log("B");
+	} else if (score >= 70) {
+		console.log("C");
+	} else if (score >= 60) {
+		console.log("D");
+	} else {
+		console.log("F");
+	}
+</script>
+<style type="text/css"></style>
+</head>
+<body>
+
+</body>
+</html>

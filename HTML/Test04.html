@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<table border = "1" cellspacing = "0"> 
+		<colgroup>
+			<col width = "100px"/>
+			<col width = "200px"/>
+			<col width = "300px"/>
+		</colgroup>
+		<thead>
+			<tr height = "100px">
+				<th>1</th> 
+				<th>2</th>
+				<th>3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr height = "100px">
+				<td colspan = "2">1-1</td>	<!-- 1-1 이라는 칸을 2칸사용하겠다라는 의미 -->
+				<td rowspan = "2">1-2</td>
+				<td>1-3</td>	<!--  4번째 칸으로 밀려버림, 4번째칸은 만든적이 없기에 작게표현됨 -->
+			</tr>
+			<tr height = "100px">
+				<td>2-1</td>
+				<td>2-2</td>
+			</tr>
+			</tbody>	
+		</table>
+	</body>
+</html>
+
+<!-- 
+Tables
+	<table> - 표
+		cellspacing = cell간의 공간
+		테이플 칸의 가로길이 넓히기 = <colgroup> <col width> </colgroup> 사용
+		
+	<thead>,<tbody>,<tfoot> 을 이용해 3단 기본 문단 
+	table - 커다란 네모 칸
+		ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+		| 	thead	|		<tr> - 가로 한줄(table row)
+		| 	tbody	|		<td> - 표의 열 , <tr> 안에 존재
+		| 	tbody	|		<th> - 제목형
+		| 	tfoot	|		세로 한칸 = cols
+		ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ	
+	<th> - 중앙 정렬, 굵은글씨
+	
+ -->

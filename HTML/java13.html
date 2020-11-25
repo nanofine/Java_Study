@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function num(obj) {
+	var t = document.getElementById("txt");
+	
+	if(t.vlaue == "0") {
+		t.value = obj.value;
+	} else {
+	
+	t.value += obj.value;
+}
+}
+
+
+</script>
+</head>
+<body>
+<input type="text" id="txt" value="0" readonly="readonly" />
+<input type="button" value="1" onclick="num(this);" />
+</body>
+</html>

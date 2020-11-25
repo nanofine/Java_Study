@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.12.4.js"\></script>
+<script type="text/javascript">
+
+var w = 0;
+var d = 0;
+var l = 0;
+
+var r = ["가위","바위","보"];
+ 
+$(document).ready(function(){
+	$("[name='sel']").on("click",function(){
+	var num = Math.floor(Math.random()*3);
+
+	if(r[num] != $(this).val()) {
+		if((num == 0 && $(this).val() == "바위") || (num == 1 && $(this).val() == "가위") || (num == 2 && $(this).val() == "보")){
+			l++;
+			$("#res").append("user : "+$(this).val() + "com : " + r[num] + ", 결과 : 졌다 <br/>");
+		}
+		else{
+			w++;
+			$("#res").append("user : "+$(this).val() + "com : " + r[num] + ", 결과 : 이겼다<br/>");
+		}
+	}
+	else{
+		d++;
+			$("#res").append("user : "+$(this).val() + "com : " + r[num] + ", 결과 : 비겼다<br/>");
+	}
+	$("#w").html(w);
+	$("#d").html(d);
+	$("#l").html(l);
+	
+	});
+});
+</script>
+</head>
+<body>
+<div>
+W<span id="w">0</span>
+D<span id="d">0</span>
+L<span id="l">0</span>
+</div>
+<input type="button" value="가위" name="sel"/>
+<input type="button" value="바위" name="sel"/>
+<input type="button" value="보" name="sel"/>
+<div id="res"></div>
+</body>
+</html>

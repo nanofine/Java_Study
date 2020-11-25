@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [ 1, 2, 3 ];
+	var arr2 = new Array();
+	console.log(arr.toString());
+	arr.push(4);
+	console.log(arr.toString());
+
+	arr.splice(1, 0, 7);
+	console.log(arr.toString());
+
+	var arr2 = [ [ 1, 2, 3 ], [ 4, 5, 6 ] ];
+
+	console.log(arr2.toString());
+
+	console.log(arr2.length);
+
+	//object
+	var stu = {
+		name : "홍길동",
+		age : 30,
+		no : 10,
+		tel : "070-1588-9292",
+		addr : "서울"
+	};
+
+	console.log(stu);
+	console.log(stu.name);
+	stu.name = "김철수";
+	console.log(stu.name);
+	
+	var list = [
+		{no : 10 , title : "test" , writer : "K"},
+		{no : 9 , title : "aaa" , writer : "B"},
+		{no : 8 , title : "KKKK" , writer : "L"}
+	];
+	for(var i = 0;i<list.length;i++)
+	{
+		console.log("글 번호 : "+ list[i].no + " , 제목 : "+list[i].title);
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
